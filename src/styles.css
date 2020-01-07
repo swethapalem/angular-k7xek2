@@ -1,0 +1,16 @@
+/* Global Styles */
+
+body {
+  padding: 20px;
+}
+
+.form-cotrol.ng-touched.ng-invalid{
+  border: 2px solid red;
+}
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

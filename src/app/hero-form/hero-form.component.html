@@ -1,0 +1,25 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+<div ngModelGroup="contact" #contact="ngModelGroup">
+  <!-- <div *ngIf="!contact.valid">...</div> -->
+  <div class="form-group">    
+    <label for="firstName">firstName</label>
+    <input required minlength="3" maxlength="15" pattern="swetha" ngModel name="firstName" #firstName="ngModel" change="log()"id="firstName" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="firstName.touched &&!firstName.valid">FirstName is required!
+      <div *ngIf="firstName.errors.minlength">Firstname should have min 3 characters</div>
+      <div *ngIf="firstName.errors.pattern">Firstname shouldn't match </div>
+    </div>
+  </div>
+</div> 
+  
+   <div class="form-group">
+    <label for="lastName">LastName</label>
+    <input id="lastName"  ngModel name="LastName" type="text" class="form-control">
+  </div>
+   <div class="form-group">
+    <label for="Description">Description</label>
+    <textarea id="Description"  ngModel name="Description" type="text" cols="10" rows="5" class="form-control"></textarea>
+  </div>
+  <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+
+
+</form>
