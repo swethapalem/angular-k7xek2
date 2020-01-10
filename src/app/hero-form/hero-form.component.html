@@ -19,6 +19,18 @@
     <label for="Description">Description</label>
     <textarea id="Description"  ngModel name="Description" type="text" cols="10" rows="5" class="form-control"></textarea>
   </div>
+  <div class="form-group">
+    <label for="contact">contact</label>
+    <select multiple ngModel name="contact" id="contact" class="form-control">
+      <option value=""></option>
+      <option *ngFor="let method of contact" [value]="method.id">
+        {{method.name}}</option>
+    </select>
+        </div>
+
+    <p>
+      {{f.value |json}}
+    </p>  
   <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
 
 

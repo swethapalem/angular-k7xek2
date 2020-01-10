@@ -7,7 +7,11 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./hero-form.component.css']
 })
 export class HeroFormComponent {
-
+contact=[
+  {id:"1", name:"email"},
+  {id:"2", name:"phone"},
+  {id:"3", name:"address"}
+];
 log(x){ 
   console.log(x);
 }
